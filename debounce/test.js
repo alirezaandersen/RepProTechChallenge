@@ -39,7 +39,7 @@ describe('debounce', function() {
     }, 45);
   });
 
-  xit('gets called with context', function(done) {
+  it('gets called with context', function(done) {
     var ctx;
     var debounced = debounce(function() {
       ctx = this;

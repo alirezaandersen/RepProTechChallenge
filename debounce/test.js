@@ -52,7 +52,7 @@ describe('debounce', function() {
     }, 15);
   });
 
-  xit('gets called with arguments', function(done) {
+  it('gets called with arguments', function(done) {
     var args;
     var debounced = debounce(function() {
       args = [].slice.call(arguments);

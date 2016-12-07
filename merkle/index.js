@@ -33,7 +33,13 @@ function merkle(arr,hash){
       },
     };
   }
-return  merkle(pairs,hash);
+return merkle(pairs,hash);
 }
 
-module.exports = merkle; 
+// not making Merkle New wont allow a prototype to be used.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
+merkle.verify = function(word,root,obj, hash){
+  return word,root,obj,hash;
+};
+
+module.exports = merkle;

@@ -1,8 +1,15 @@
-function debounce(func, time){
+function debounce(func, time) {
 
-  return function(){
-    setTimeout(func,time);
+  var processing = false;
+  return function() {
+    if (!processing) {
+      processing = true;
+      setTimeout(function() {
+        func();
+        processing = false;
+      }, time);
+    }
+
   };
 }
-
 module.exports = debounce;

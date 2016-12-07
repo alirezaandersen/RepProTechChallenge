@@ -25,7 +25,7 @@ describe('debounce', function() {
     }, 15);
   });
 
-  xit("will execute more than once outside the threshold", function(done) {
+  it("will execute more than once outside the threshold", function(done) {
     var called = 0;
     var debounced = debounce(function() {
       called++;

@@ -3,7 +3,7 @@ var value = require('./');
 
 describe('value', function() {
 
-  xit('works on simple values', function() {
+  it('works on simple values', function() {
     assert.equal(value(2), 2);
   });
 
@@ -17,7 +17,7 @@ describe('value', function() {
     assert.equal(value(fn), 4);
   });
 
-  it('works on nested functions WOW!', function() {
+  xit('works on nested functions WOW!', function() {
     var fn = function() { return function() { return function() { return 5; }; }; };
     assert.equal(value(fn), 5);
   });
